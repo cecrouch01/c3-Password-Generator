@@ -25,8 +25,9 @@ function writePassword() {
     } //return lengthValue
 
 //Prompt for including Lowercase Characters
-  var lcInclusion = window.confirm ("Would you like to include Uppercase Characters in your password?")
-  
+  var lcInclusion = window.confirm ("Would you like to include Uppercase Characters in your password?");
+    console.log(lcInclusion)
+
 //Prompt for including Uppercase characters
   var ucInclusion = window.confirm ("Would you like to include Uppercase Characters in your password?"); 
     console.log (ucInclusion)
