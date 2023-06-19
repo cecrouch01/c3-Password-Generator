@@ -4,45 +4,71 @@ var generateBtn = document.querySelector("#generate");
 // var ucValue = charCodeAt() //reference 65-90 (uppercase) and 97-122 (lowercase)
 // var numValue = [1,2,3,4,5,6,7,8,9,0] //reference 48-57
 // var specValue = charCodeat() //33, 35-38, 40-47, 58-64, 91-95
-
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz"
+var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numericalCharacters = "1234567890"
 var specialCharacters = "!@#$%^&*()"
 var characterBank = ""
-var randomIndex = Math.floor(Math.random() * upperCase.length);
-
-console.log(upperCase[randomIndex])
-console.log(upperCase.length)
 
 // Write password to the #password input
 function writePassword() {
  // Prompt for character length
   var pwLength = window.prompt ("How many characters would you like to use for you password?");
    if (pwLength > 8 && pwLength < 128) {
-    window.alert ("Hurray");
+    window.alert ("Please decide what type of characters you would like to use in your password");
     } else {
-    window.alert ("Boo!")
+    window.alert ("Your password needs to be 8-128 characters long.")
       writePassword();
-    } //return lengthValue
+    }
 
 //Prompt for including Lowercase Characters
-  var lcInclusion = window.confirm ("Would you like to include Uppercase Characters in your password?");
-    console.log(lcInclusion)
+  var lcInclusion = window.confirm ("Would you like to include Lowercase Characters in your password?");
+  
 
 //Prompt for including Uppercase characters
   var ucInclusion = window.confirm ("Would you like to include Uppercase Characters in your password?"); 
-    console.log (ucInclusion)
+    console.log(ucInclusion)
 
 
 //Prompt for including Numbers 
-  var numInclusion = window.confirm ("Would you like to include Numbers in your password?")
+  var numInclusion = window.confirm ("Would you like to include Numbers in your password?");
     console.log(numInclusion)
 
   
 //Prompt for including Special characters
-  var specInclusion = window.confirm ("Would you like to include special characters in you password?");
+  var specInclusion = window.confirm ("Would you like to include Special Characters in you password?");
     console.log(specInclusion)
   
-//if ucinclusion, numinclusion, specinclusion i must use uppercase numbers and special characters in my password of pwlength
+    //First I need to create a bank of characters. For that bank if ucinclusion, numinclusion,and/or specinclusion true then I must use uppercase numbers and special characters in my password of pwlength.
+    //Second I need to generate multiple random characters of a specified length.
+    // Third I need to make sure the generated password is displayed to the webpage
+      if (lcInclusion === true){
+        characterBank.concat(lowercaseCharacters);
+        }
+    
+    //   if (ucInclusion === true) {
+    //     characterBank.concat(uppercaseCharacters);
+    //     } 
+    
+    //   if (numInclusion === true) {
+    //     characterBank.concat(numericalCharacters);
+    //     }
+    
+    //   if (specInclusion === true) {
+    //     characterBank.concat(specialCharacters);
+    //     }
+    // }
+    // console.log(characterBank)
+
+    
+
+      
+//use this to randomize 
+// var password = Math.floor(Math.random() * .length);
+
+// console.log(upperCase[randomIndex])
+// console.log(upperCase.length)
+
 
 
   var passwordText = document.querySelector("#password");
