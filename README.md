@@ -3,6 +3,8 @@
 ## Description
 This is a website that will generate a random password for the user, using criteria selected by the user. This will allow for the user to create multiple different secure passwords. This generator can be used by accessing it via the link below. 
 
+https://cecrouch01.github.io/c3-Password-Generator/
+
 ## Installation
 
 N/A
