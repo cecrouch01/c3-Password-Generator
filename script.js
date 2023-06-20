@@ -53,38 +53,17 @@ function writePassword() {
       console.log(specInclusion);
     }
 
-  //if values are not true
+    //This Generates the password. 
     var password = ""
     if (lcInclusion || ucInclusion || numInclusion || specInclusion) {
-      for (var i = 1; i < pwLength; i++) {
-        var pwCharacter = String.characterBank[Math.floor(Math.random() * characterBank.length)]
-       password = password.concat(pwCharacter)
+      for (var i = 1; i <= pwLength; i++) {
+        var pwCharacter = characterBank.charAt(Math.floor(Math.random() * characterBank.length));
+       password = password.concat(pwCharacter);
       } 
     } else {
       window.alert("Please use at least one character type for you password");
       writePassword();
     }
-    console.log(password)
-  
-
-
-    //First I need to create a bank of characters. For that bank if ucinclusion, numinclusion,and/or specinclusion true then I must use uppercase numbers and special characters in my password of pwlength.
-    //Second I need to generate multiple random characters of a specified length.
-    // Third I need to make sure the generated password is displayed to the webpage
-    
-    //console.log(characterBank) THIS ISN'T WORKING!
-
-
-    
-
-      
-//use this to randomize 
-// var password = Math.floor(Math.random() * .length);
-
-// console.log(upperCase[randomIndex])
-// console.log(upperCase.length)
-
-
 
   var passwordText = document.querySelector("#password");
    
@@ -94,9 +73,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-//Click button prompt appears
-//I have a series of prompts for password criteria
-//userpicks the critera
-//there is a minimum of 8 and maxium of 128 characters
-//confirmation of whether or not to include lowercase, uppercase, numberic, and/or special characters
-//when all prompts are answered then a password is generated. 
