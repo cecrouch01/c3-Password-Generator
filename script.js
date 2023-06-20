@@ -15,9 +15,9 @@ function writePassword() {
     window.alert ("Please decide what type of characters you would like to use in your password");
     } else {
     window.alert ("Your password needs to be 8-128 characters long.");
-      return writePassword
+      return writePassword();
     }
-
+    
 //Prompt for including Lowercase Characters
   var lcInclusion = window.confirm ("Would you like to include Lowercase Characters in your password?");
     if (lcInclusion === true) {
@@ -53,7 +53,7 @@ function writePassword() {
       } 
     } else {
       window.alert("Please use at least one character type for you password");
-      return writePassword
+      return writePassword ();
     }
 
   var passwordText = document.querySelector("#password");
